@@ -6,3 +6,5 @@
 
 - Next.js
 - Chakra
+
+[Plotly landing Page](https://plotly.vercel.app)

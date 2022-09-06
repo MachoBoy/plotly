@@ -43,7 +43,7 @@ const logoData = [
 const LogoContainer = () => {
   return (
     <Grid
-      px={{ base: "96px", lg: "0" }}
+      mx="auto"
       templateColumns="repeat(3, 1fr)"
       justifyItems="center"
       alignItems="center"

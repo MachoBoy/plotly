@@ -18,10 +18,11 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Box
-          px={{ base: "38px", lg: 0 }}
+          px="38px"
           pt="87px"
           pb="167px"
-          maxWidth="1142px"
+          maxWidth="1218px"
+          minWidth="675px"
           mx="auto"
         >
           <Box w="100%" mx="auto">
@@ -38,13 +39,13 @@ const Home: NextPage = () => {
               <Box maxWidth={{ base: "full" }}>
                 <TextContent />
               </Box>
-              <Box>
+              <Box width="100%" maxWidth={{ base: "full", lg: "530px" }}>
                 <Box
                   marginLeft={{ base: "0", lg: "27px" }}
                   position={{ base: "relative", lg: "absolute" }}
                   right={{ lg: 0 }}
                   top={{ lg: 0 }}
-                  width={{ base: "full", lg: "530px" }}
+                  maxWidth={{ base: "full", lg: "530px" }}
                 >
                   <Form />
                 </Box>

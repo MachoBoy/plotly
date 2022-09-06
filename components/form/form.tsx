@@ -29,17 +29,31 @@ const Form = () => {
       overflow="hidden"
       paddingX="52px"
       paddingTop="56px"
-      paddingBottom="40px"
+      paddingBottom={{ base: "40px", lg: "61px" }}
       boxShadow={formBoxShadow}
       width="100%"
     >
       <FormControl>
         <RadioGroup defaultValue="professional">
           <HStack spacing={35}>
-            <Radio value="professional">
+            <Radio
+              value="professional"
+              _checked={{
+                bg: "#7A76FF",
+                color: "white",
+                borderColor: "#7A76FF",
+              }}
+            >
               <Text as="b">Professional</Text>
             </Radio>
-            <Radio value="student">
+            <Radio
+              value="student"
+              _checked={{
+                bg: "#7A76FF",
+                color: "white",
+                borderColor: "#7A76FF",
+              }}
+            >
               <Text as="b">Student</Text>
             </Radio>
           </HStack>
@@ -48,36 +62,50 @@ const Form = () => {
         <Grid
           marginTop="33px"
           templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
-          gap={{ base: "20px", lg: "31px" }}
+          gap={{ base: "20px", lg: "20px" }}
         >
           <GridItem>
-            <FormLabel color="#7E8489">First name*</FormLabel>
+            <FormLabel color="#7E8489" marginBottom="0" fontSize="14px">
+              First name*
+            </FormLabel>
             <Input />
           </GridItem>
           <GridItem>
-            <FormLabel color="#7E8489">Last name*</FormLabel>
+            <FormLabel color="#7E8489" marginBottom="0" fontSize="14px">
+              Last name*
+            </FormLabel>
             <Input />
           </GridItem>
           <GridItem>
-            <FormLabel color="#7E8489">Business Email*</FormLabel>
+            <FormLabel color="#7E8489" marginBottom="0" fontSize="14px">
+              Business Email*
+            </FormLabel>
             <Input />
           </GridItem>
           <GridItem>
-            <FormLabel color="#7E8489">Phone*</FormLabel>
+            <FormLabel color="#7E8489" marginBottom="0" fontSize="14px">
+              Phone*
+            </FormLabel>
             <Input />
           </GridItem>
           <GridItem>
-            <FormLabel color="#7E8489">Company Name*</FormLabel>
+            <FormLabel color="#7E8489" marginBottom="0" fontSize="14px">
+              Company Name*
+            </FormLabel>
             <Input />
           </GridItem>
           <GridItem>
-            <FormLabel color="#7E8489">Title*</FormLabel>
+            <FormLabel color="#7E8489" marginBottom="0" fontSize="14px">
+              Title*
+            </FormLabel>
             <Input />
           </GridItem>
         </Grid>
         <Box marginTop={{ base: "20px", lg: "31px" }}>
-          <FormLabel color="#7E8489">Tell us about your project*</FormLabel>
-          <Textarea />
+          <FormLabel color="#7E8489" marginBottom="0" fontSize="14px">
+            Tell us about your project*
+          </FormLabel>
+          <Textarea height="122px" />
         </Box>
         <HStack marginTop={{ base: "20px", lg: "27px" }}>
           <Button
@@ -91,7 +119,9 @@ const Form = () => {
           >
             SEND
           </Button>
-          <FormLabel color="#7E8489">*required</FormLabel>
+          <FormLabel color="#7E8489" fontSize="14px">
+            *required
+          </FormLabel>
         </HStack>
       </FormControl>
     </Box>
